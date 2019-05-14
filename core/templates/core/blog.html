@@ -1,0 +1,30 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+  <title>Blog | La Caffettiera</title>
+{% endblock title %}
+  {% block content %}
+
+      <!-- Contenido Principal -->
+      <div class="container">
+        {% for proyecto in proyectos %}
+        <!-- Proyecto -->
+        <div class="row project">   
+          <div class="col-lg-3 col-md-4 offset-lg-1">
+            <img class="img-fluid" src="{{proyecto.imagen.url}}" alt="">
+          </div>
+          <div class="col-lg-7 col-md-8">
+            <h2 class="section-heading title">{{proyecto.titulo}}</h2>   
+            <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm....</p>
+            <p><a href="http://google.com">Más información</a></p>
+          </div>
+          {% endfor %}
+        </div>
+
+    </div>
+    
+       
+
+
+{% endblock content %} 
+
